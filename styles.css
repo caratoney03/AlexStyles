@@ -1,0 +1,448 @@
+body {
+    margin: 0;
+    background-color: rgb(1, 8, 4);
+}
+
+/* Nav Bar */
+
+.navBar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 10;
+    padding-left: 2rem;
+    background: rgba(10, 15, 9, 0.286);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px 10px rgba(10, 15, 9, 0.25);
+}
+
+.navItem {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.2rem;
+}
+
+@media (max-width: 600px) {
+    .navItem {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+}
+
+/* Hero */
+
+#hero {
+    position: relative;
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+#greenery {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#colorBlock {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.279);
+    z-index: 2;
+}
+
+#logo {
+    position: relative;
+    z-index: 3;
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    height: auto; /* keep aspect ratio */
+    object-fit: contain;
+    transition: width 160ms ease;
+}
+
+/* Scroll Quote */
+
+#scrollQuote {
+    position: relative;
+    height: 7vh;
+    width: 100%;
+    background-color: rgb(1, 8, 4);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.scrollQuoteText {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size: 1.3rem;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    white-space: nowrap;
+    letter-spacing: 0.2rem;
+    padding: 0 4.1rem 0 0;
+    animation: scroll-right 25s linear infinite;
+    left: 0;
+}
+
+@keyframes scroll-right {
+    0% {
+        left: 0%;
+    }
+    100% {
+        left: -100%;
+    }
+}
+
+/* About Me */
+
+#aboutMe {
+    display: flex;
+    width: 100%;
+    height: 70vh;
+    background-color: rgb(32, 48, 37);
+    margin: 0; 
+}
+
+#aboutImg {
+    width: 65%;
+    height:100%;
+    z-index: 1;
+}
+
+#aboutText {
+    width: 45%;
+    height: 100%;
+    color: white;
+    padding: 2rem;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    border-bottom-left-radius: 35px;
+    border-top-left-radius: 35px;
+    z-index: 2;
+    position: relative;
+    left: -130px;
+    background-color: rgb(32, 48, 35);
+    box-shadow: -10px 0 30px -10px rgba(0,0,0,0.3);
+}
+
+#headshot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 1000px) {
+    #aboutText {
+        left: -100px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 850px) {
+    #aboutText {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 750px) {
+    #aboutMe {
+        flex-direction: column;
+        height: auto;
+        align-items: stretch;
+    }
+
+    #aboutImg {
+        width: 100%;
+        height: auto;
+        z-index: 1;
+        order: 0;
+    }
+
+    #headshot {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    #aboutText {
+        width: 100%;
+        height: auto;
+        padding: 1.5rem;
+        box-sizing: border-box;
+        position: relative;
+        left: 0;
+        order: 1;
+        background-color: rgb(32, 48, 35);
+        border-top-left-radius: 35px;
+        border-top-right-radius: 35px;
+        box-shadow: 0 -10px 30px -10px rgba(0,0,0,0.3);
+        font-size: 1rem;
+    }
+}
+
+
+/* Featured Projects */
+
+#featured {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+#featured h2 {
+    width: 100%;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-bottom: 2rem;
+    padding: 2rem 0;
+    border-radius: 15px 15px 0 0;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+}
+
+#row1 {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#row2 {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#project1 {
+    width: 40vw;
+    height: 70vh;
+    background-color:rgb(32, 48, 37);
+    background-image: url('brandProject.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+    margin: 0 2rem;
+}
+
+#project2 {
+    width: 40vw;
+    height: 50vh;
+    background-color:rgb(32, 48, 37);
+    background-image: url('webProject.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-radius: 15px;
+    margin: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+
+#project3 {
+    width: 40vw;
+    height: 60vh;
+    background-color:rgb(32, 48, 37);
+    background-image: url('magazineProject.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+    margin: 2rem 2rem;
+}
+
+#project4 {
+    width: 40vw;
+    height: 80vh;
+    background-color:rgb(32, 48, 37);
+    background-image: url('bottleProject.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+    top: -65px;
+}
+
+.projectText {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    align-content: center;
+    justify-content: center;
+    display:none;
+    backdrop-filter: blur(5px);
+}
+
+.project:hover .projectText {
+    display: block;
+}
+
+.project:hover {
+    transform: translateY(-8px) scale(1.05);
+    transition: transform 0.18s cubic-bezier(.4,1,.6,1), box-shadow 0.18s;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.22);
+}
+
+@media (max-width: 900px) {
+    #project1, #project2, #project3{
+        width: 80vw;
+        margin: 1rem 0;
+    }
+
+    #project4 {
+        width: 80vw;
+        margin: 1rem 0;
+        top: 0;
+    }
+
+
+}
+
+/* Contact */
+
+#contact {
+    width: 100%;
+    height: 80vh;
+}
+
+#contactBox {
+    width: 69vw;
+    height: 68.5vh;
+    background-color: rgb(1, 8, 4);
+    border-radius: 25px;
+    box-shadow: 0 8px 32px rgba(10, 15, 9);
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    color: white;
+    padding: 5rem;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+#contactForm {
+    width: 100%;
+}
+
+.inputBox {
+    display: block;
+    align-self: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.75rem 1rem;
+    margin: 0.75rem 0 1rem 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    min-height: 4rem;
+    background: rgba(255,255,255,0.06);
+    color: white;
+}
+
+/* Input focus styles: green border and lighter background */
+.inputBox:focus,
+.inputBox:focus-visible {
+    outline: none;
+    border: 2px solid rgba(0, 255, 166, 0.95);
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 6px 18px rgba(0, 255, 166, 0.08), 0 0 0 4px rgba(0, 255, 166, 0.06);
+    transition: border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+#glowBox {
+    position: relative;
+    transition: background 0.2s ease;
+    --mouse-x: 50%;
+    --mouse-y: 50%;
+    width: 70vw;
+    height: 70vh;
+    background: rgba(38, 37, 37, 0.286);
+    backdrop-filter: blur(13px);
+    border-radius: 25px;
+    box-shadow: 0 8px 32px rgba(10, 15, 9, 0.22);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    color: white;
+    box-sizing: border-box;
+    z-index: 2;
+  }
+
+#glowBox::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    border-radius: inherit;
+    background: radial-gradient(
+      circle at var(--mouse-x) var(--mouse-y),
+      rgba(0, 255, 166, 0.6) 0%,
+      rgba(12, 121, 38, 0.2) 30%,
+      transparent 60%
+    );
+    transition: background 0.2s ease;
+  }
